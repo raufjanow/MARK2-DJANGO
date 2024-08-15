@@ -10,13 +10,15 @@ from . import views
 # ]
 
 #                                            SECOND WAY
+from django.urls import path
+from . import views
+
 urlpatterns = [
-    path('',views.index, name = 'hello'),
-    path('about/', views.index, name='about'),
-    path('classes/', views.index, name='classes'),
-    path('blog/', views.index, name='blog'),
+    path('about/',views.about,name ='about'),
+    path('blog/',views.blog,name ='blog'),
+    path('class/',views.clas,name ='class'),
+    path('',views.copy_blog_fun,name="index"),
+    # path('mark',views.copy_li_fun,name="mark")
 ]
-
-
 
 
